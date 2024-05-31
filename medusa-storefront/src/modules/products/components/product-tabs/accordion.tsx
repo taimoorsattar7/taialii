@@ -24,14 +24,14 @@ type AccordionProps =
       React.RefAttributes<HTMLDivElement>)
 
 const Accordion: React.FC<AccordionProps> & {
-  Item: React.FC<AccordionItemProps>
+  Item: React.FC<any> //AccordionItemProps
 } = ({ children, ...props }) => {
   return (
     <AccordionPrimitive.Root {...props}>{children}</AccordionPrimitive.Root>
   )
 }
 
-const Item: React.FC<AccordionItemProps> = ({
+const Item: React.FC<any> = ({
   title,
   subtitle,
   description,
