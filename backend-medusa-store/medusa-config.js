@@ -47,9 +47,10 @@ const plugins = [
     /** @type {import('@medusajs/admin').PluginOptions} */
     options: {
       autoRebuild: true,
+      backend: "https://taialii-backend.onrender.com",
       develop: {
         open: "true",
-        port: "7001"
+        port: "7001",
       },
     },
   },
@@ -78,7 +79,7 @@ const projectConfig = {
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
   database_extra:
-    process.env.DATABASE_SSL !== 'true'
+    process.env.DATABASE_SSL !== "true"
       ? undefined
       : {
           ssl: {
