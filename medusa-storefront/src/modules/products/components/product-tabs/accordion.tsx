@@ -23,7 +23,7 @@ type AccordionProps =
   | (AccordionPrimitive.AccordionMultipleProps &
       React.RefAttributes<HTMLDivElement>)
 
-const Accordion: React.FC<AccordionProps> & {
+const Accordion: React.FC<any> & { //AccordionProps
   Item: React.FC<any> //AccordionItemProps
 } = ({ children, ...props }) => {
   return (
