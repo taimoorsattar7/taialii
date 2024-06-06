@@ -7,22 +7,11 @@
   "keywords": [
     "medusa-storefront"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "git diff HEAD --quiet && npm test"
-    }
-  },
   "scripts": {
-    "prepare": "husky",
     "dev": "next dev -p 8000",
     "build": "rm -rf .next & next build",
     "start": "next start -p 8000",
     "lint": "next lint",
-    "lint:fix": "next lint --fix",
-    "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
-    "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
-    "ts-lint": "npx tsc --noEmit",
     "analyze": "ANALYZE=true next build",
     "test-e2e": "playwright test e2e"
   },
@@ -44,20 +33,12 @@
     "@paypal/react-paypal-js": "^7.8.1",
     "@stripe/react-stripe-js": "^1.7.2",
     "@stripe/stripe-js": "^1.29.0",
-    "@types/jest": "^29.5.12",
-    "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0",
     "algoliasearch": "^4.20.0",
     "axios": "^1.6.7",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
     "lodash": "^4.17.21",
     "medusa-react": "^9.0.0",
     "next": "^14.0.0",
     "pg": "^8.11.3",
-    "prettier-plugin-tailwindcss": "^0.6.1",
     "react": "^18.2.0",
     "react-country-flag": "^3.0.2",
     "react-dom": "^18.2.0",
@@ -80,8 +61,8 @@
     "@types/react-instantsearch-dom": "^6.12.3",
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
-    "eslint": "^8.10.0",
-    "eslint-config-next": "^13.5.6",
+    "eslint": "8.10.0",
+    "eslint-config-next": "^13.4.5",
     "postcss": "^8.4.8",
     "prettier": "^2.8.8",
     "tailwindcss": "^3.0.23",
