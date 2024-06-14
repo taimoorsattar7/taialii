@@ -1,6 +1,8 @@
 import axios, { AxiosError, AxiosInstance } from "axios"
 
-axios.defaults.baseURL = process.env.CLIENT_SERVER || "http://localhost:9000"
+// axios.defaults.baseURL = process.env.CLIENT_SERVER || "http://localhost:9000"
+
+axios.defaults.baseURL = "https://taialii-backend.onrender.com"
 let region = undefined as any
 
 export async function seedData() {
